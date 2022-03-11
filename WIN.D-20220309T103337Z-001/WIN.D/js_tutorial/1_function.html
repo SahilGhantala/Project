@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <link rel="shortcut icon" href="img/web-img/logo-1.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+
+    <!-- Magnificpopup Css -->
+    <link rel="stylesheet" type="text/css" href="../css/magnific-popup.css">
+
+    <!--Material Icon -->
+    <link rel="stylesheet" type="text/css" href="../css/materialdesignicons.min.css" />
+
+    <!--Slider-->
+    <link rel="stylesheet" href="../css/owl.carousel.css" />
+    <link rel="stylesheet" href="../css/owl.theme.css" />
+    <link rel="stylesheet" href="../css/owl.transitions.css" />
+
+    <!-- Custom  Css -->
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+</head>
+<body>
+      <!-- javascript function -->
+      <div class="container">
+        <div class="col-lg-12 mt-5">
+            <h6 class="mt-3 text-center text-hedding font-300">#LEARN JAVASCRIPT#</h6>
+            <h1 class="text-center text-hedding-b"><span class="home-title-border">JavaScript</span> Tutorial</h1>
+        </div>
+        <div class="mt-5 jfph">JavaScript Functions</div>
+        <p class="mt-2">JavaScript functions are used to perform operations. We can call JavaScript function many times
+            to reuse the code.</p>
+
+        <div class="mt-4 jfph">Advantage of JavaScript function </div>
+        <div class="mt-2">1. Code reusability: We can call a function several times so it save coding.</div>
+        <div class="mt-2">2. Less coding: It makes our program compact. We don’t need to write many lines of code each
+            time to perform a common task.</div>
+
+        <div class="mt-4 jfph">Function Defination</div>
+        <div class="mt-2">* A JavaScript function is defined with the function keyword, followed by a name, followed by
+            parentheses ().</div>
+        <div class="mt-2">* Function names can contain letters, digits, underscores, and dollar signs (same rules as
+            variables).</div>
+        <div class="mt-2">* Function parameters are listed inside the parentheses () in the function definition.</div>
+        <div class="mt-2">* The code to be executed, by the function, is placed inside curly brackets: {}</div>
+        <div class="mt-2">* Function arguments are the values received by the function when it is invoked.</div>
+
+        <div class="mt-4 jfph">Type of Functions</div>
+        <div class="mt-2">1. Named Function</div>
+        <div class="mt-2">2. Anonymous Function</div>
+        <div class="mt-2">3. Arrow Function</div>
+        <div class="mt-2">4. Call back Function / Self invoke function</div>
+
+        <div class="mt-5 jfph">1. Named Function</div>
+        <div class="mt-3 jfph2">Sytax:</div>
+        <div>
+            <pre class="mt-2 sytax shadow-lg p-3 mb-5 rounded">
+			<spam class="fvlc">function</spam>  <spam class="console">functionName</spam>(Parameter1, Parameter2)				   <spam class="comm">//function definition</spam>
+			{
+				<spam class="comm"> // code to be executed </spam>                     	 
+			}
+			<spam class="console">console</spam>.log(functionName ())                            	    <spam class="comm"> // function called</spam></pre>
+        </div>
+        <div class="mt-3 jfph2">Example:</div>
+        <div>
+            <pre class="mt-2 sytax shadow-lg p-3 mb-5 rounded">
+			<spam class="fvlc">function</spam>  <spam class="console">square</spam>(square)				   
+			{
+				return number * number; 	                             		        	 
+			}
+			<spam class="console">console</spam>.log(square (5))                   					<spam class="comm"> //25</spam>           	 
+		</div>
+
+        <div class="mt-5 jfph">2. Anonymous Function</div>
+        <div class="mt-3 jfph2">Sytax:</div>
+        <div><pre class="mt-2 sytax shadow-lg p-3 mb-5 rounded">
+			<spam class="fvlc">variable</spam>  <spam class="console">functionName</spam> = function(Parameter1, Parameter2, ...)				 
+			{
+				<spam class="comm"> // code to be executed </spam>           
+                        }                    	   
+		</div>
+        <div mb="2">* An anonymous function is a function without a name. The following shows how to define an anonymous function:</div>
+        <div mb="2">* If you want to create a function and execute it immediately after the declaration, you can declare an anonymous function like this :</div>
+        <div class="mt-3 jfph2">Example:</div>
+		<div><pre class="mt-2 sytax shadow-lg p-3 mb-5 rounded">
+			(<spam class="fvlc">function</spam>() {
+                           <span class="console"> console</span>.log('Immediately invoked function execution');             <span class="comm"> //Immediately invoked function execution </span>
+                        })();  
+            </pre>
+        </div>
+        <hr>
+        <div class="mt-2">* The following shows an anonymous function that displays a message.</div>
+        <div class="mt-3 jfph2">Example:</div>
+        <div>
+            <pre class="mt-2 sytax shadow-lg p-3 mb-5 rounded">
+            let show = function() {
+                console.log('Anonymous function');	                                //Anonymous function
+            };
+            show();
+			console.log(square (5));                   				         	 
+		</div>
+        <hr>
+        <div class="mt-2">* Using anonymous passing parameter.</div>
+        <div class="mt-3 jfph2">Example:</div>
+        <div><pre class="mt-2 sytax shadow-lg p-3 mb-5 rounded">
+            var test = function (p1,p2)
+            {
+                  return p1 * p2;                                               	//45
+            }
+            console.log(test (5,9));                            
+		</div>
+        <hr>
+        <div class="mt-2">* Using anonymous functions as arguments.</div>
+        <div class="mt-3 jfph2">Example:</div>
+        <div><pre class="mt-2 sytax shadow-lg p-3 mb-5 rounded">
+            setTimeout(function() {
+                console.log('Execute later after 1 second')                        //Execute later after 1 second
+            }, 1000)
+		</div>
+        <div class="mt-2">*In this example, we pass an anonymous function into the setTimeout() function. The setTimeout() function executes this anonymous function one second later.</div>
+
+        <div class="mt-5 jfph">3. Arrow Function</div>
+        <div class="mt-3 jfph2">Sytax:</div>
+        <div><pre class="mt-2 sytax shadow-lg p-3 mb-5 rounded">
+            variable  functionName = (Parameter1, Parameter2, ..) =>
+            {
+        	            // Function body
+            }
+			</pre>
+        </div>
+        <hr>
+        <div class="mt-2">* Arrow Functions Return Value by Default:</div>
+        <div class="mt-3 jfph2">Example:</div>
+        <div>
+            <pre class="mt-2 sytax shadow-lg p-3 mb-5 rounded">
+            test = () => "Hello World!";                                           //Hello World!
+            test();
+		</div>          	   
+        <div class="mt-2">* It gets shorter! If the function has only one statement, and the statement returns a value, you can remove the brackets and the return keyword :</div>
+        <hr>
+        <div class="mt-2">* Arrow Function With Parameters:</div>
+        <div class="mt-3 jfph2">Example:</div>
+        <div><pre class="mt-2 sytax shadow-lg p-3 mb-5 rounded">
+            test = (p1,p2) => p1*p2;                                           //45
+            test(5,9);           
+		</div>    
+        <div class="mt-5 jfph">4. Call back Function / Self invoke function</div>
+        <div class="mt-2">* A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.</div>
+        <div class="mt-3 jfph2">Sytax:</div>
+        <div><pre class="mt-2 sytax shadow-lg p-3 mb-5 rounded">
+            
+			</pre>
+        </div>
+        <hr>
+        <div class="mt-2">* In JavaScript, you can also pass a function as an argument to a function. This function that
+            is passed as an argument inside of another function is called a callback function.</div>
+        <div class="mt-3 jfph2">Example:</div>
+        <div class="boxes" style="display: flex; justify-content: center; ">
+            <div>
+                <pre class="mt-2 sytax shadow-lg p-3 mb-5 rounded ">
+            // callback function
+            function firstFunc(){
+                console.log("call first...")
+            }
+                               
+            // function
+            function secondFunc(para){
+                para()
+                console.log("call second...")
+            }           
+
+            //passing function as an argument
+            secondFunc(firstFunc);
+		</div>  
+        <div><pre class="mt-2 sytax shadow-lg p-3 mb-5 rounded">
+            // callback function
+            function firstFunc(){
+                console.log("call first...")
+            }
+                                
+            // function
+            function secondFunc(para){
+                console.log("call second...")
+                para()
+            }
+
+            //passing function as an argument
+            secondFunc(firstFunc);
+		</div>  
+
+    </div>  
+    <div class="mt-3 jfph2">Output:</div>
+        <div class="boxes" style="display: flex; justify-content: center; ">
+        <div><pre class="mt-2 sytax shadow-lg p-3 mb-5 rounded ">
+            call first...
+            call second...
+		</div>  
+        <div><pre class="mt-2 sytax shadow-lg p-3 mb-5 rounded">
+            call second...
+            call first...           
+		</div>  
+    </div>  
+    <hr>
+    <div class="mt-2">* In JavaScript, you can also pass a function as an argument to a function. This function that is passed as an argument inside of another function is called a callback function.</div>
+    <div class="mt-3 jfph2">Example:</div>
+        <div class="boxes" style="display: flex; justify-content: center; ">
+            <div>
+                <pre class="mt-2 sytax shadow-lg p-3 mb-5 rounded ">
+                    function secondFunc(para){
+                        para()
+                        console.log("call second...")
+                    }
+                   
+                    // call back by arrow
+                    secondFunc(()=>console.log("call first..."))  
+                    
+                    
+		</div>  
+        <div><pre class="mt-2 sytax shadow-lg p-3 mb-5 rounded">
+            function secondFunc(para){
+                para()
+                console.log("call second...")
+            }
+           
+            //call back by anonymous
+            secondFunc(function(){
+              console.log("call first...")
+            })           
+		</div>  
+
+    </div>  
+    <div class="mt-3 jfph2">Output:</div>
+        <div class="boxes" style="display: flex; justify-content: center; ">
+        <div><pre class="mt-2 sytax shadow-lg p-3 mb-5 rounded ">
+            call first...
+            call second...     
+		</div>  
+        <div><pre class="mt-2 sytax shadow-lg p-3 mb-5 rounded">
+            call first...
+            call second...                      
+		</div>
+        </div> 
+        <div class="mt-2">*In the above program, there are two functions. While calling the secondFunc() function, one argument as function are passed. The firstFunc() function is a callback function</div> 
+        <hr>
+
+        <div class="mt-3 jfph2">Example:Program with setTimeout()</div>
+        <div>
+            <pre class="mt-2 sytax shadow-lg p-3 mb-5 rounded">
+                //  program that shows the delay in execution
+
+                function greet() {
+                    console.log('Hello world');
+                }
+                                   
+                function sayName(name) {
+                    console.log('Hello' + ' ' + name);
+                }
+                                   
+                // calling the function
+                setTimeout(greet, 2000);
+                sayName('John'); 
+		</div>          	   
+        <div class="mt-3 jfph2">Output:</div>
+        <div><pre class="mt-2 sytax shadow-lg p-3 mb-5 rounded">
+            Hello John
+            Hello world
+			</pre>
+        </div>
+        <div class="mt-2"><ul><li>As you know, the setTimeout() method executes a block of code after the specified time.</li>
+        <li>Here, the greet() function is called after 2000 milliseconds (2 seconds). During this wait, the sayName('John'); is executed. That is why Hello John is printed before Hello world.</li>
+        <li>The above code is executed asynchronously (the second function; sayName() does not wait for the first function; greet() to complete).</li></ul></div>
+        <hr>
+
+        <div class="mt-3 jfph2">Example:Using a Callback Function</div>
+        <div>
+            <pre class="mt-2 sytax shadow-lg p-3 mb-5 rounded">
+                // Callback Function Example
+                function greet(name, myFunction) {
+                    console.log('Hello world');
+                                    
+                // callback function
+                // executed only after the greet() is executed
+                myFunction(name);
+                }                   
+                                    
+                // callback function
+                function sayName(name) {
+                    console.log('Hello' + ' ' + name);
+                }                   
+                                    
+                // calling the function after 2 seconds
+                setTimeout(greet, 2000, 'John', sayName);
+
+		</div>          	   
+        <div class="mt-3 jfph2">Output:</div>
+        <div><pre class="mt-2 sytax shadow-lg p-3 mb-5 rounded">
+            Hello world
+            Hello John           
+			</pre>
+        </div>
+        <div class="mt-2"><ul><li>In the above program, the code is executed synchronously. The sayName() function is passed as an argument to the greet() function.</li>
+        <li>The setTimeout() method executes the greet() function only after 2 seconds. However, the sayName() function waits for the execution of the greet() function.</li>
+        <li>Note : The callback function is helpful when you have to wait for a result that takes time. For example, the data coming from a server because it takes time for data to arrive.</li>
+    </div> 
+<!-- end javascript function -->
+
+<!-- start footer -->
+<footer>
+    <div class="container">
+        <hr>
+        <h6 class="footer-text mt-5">Copyrights 2019 <span class="and-color">WIN.D</span> - Minimal WordPress Theme</h6>
+        <h6 class="footer-text">All Rights Reserved</h6>
+    </div>
+    <div class="footer-color"></div>
+</footer>
+<!-- end footer -->
+
+
+
+
+<!-- Style switcher -->
+<div id="style-switcher" style="left: 0px;">
+    <div>
+        <h3>Select your Topic</h3>
+        <div class="text-center">
+               <a class="switcher-text" href="../index.html"  class="menu-home-color">Home</a><br>
+               <a class="switcher-text" href="1_function.html">Function</a><br>
+               
+        
+        </div>
+    </div>
+    <div class="bottom">
+        <a href="#" class="settings"><i class="mdi mdi-format-list-bulleted"></i></a>
+    </div>
+</div>
+<!-- end Style switcher -->
+
+
+<!-- js -->     
+<script src="../js/jquery.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.easing.min.js"></script>
+<script src="../js/scrollspy.min.js"></script>
+<!-- Owl Carousel -->
+<script src="../js/owl.carousel.min.js"></script>
+<!-- JARALLAX JS -->
+<script src="../js/jarallax.js"></script>
+<!--Counter-->
+<script src="../js/waypoints.min.js"></script>
+<script src="../js/jquery.counterup.min.js"></script>
+<!-- Magnific Popup -->
+<script src="../js/jquery.magnific-popup.min.js"></script>
+<!-- Switcher script for demo only -->
+<script type="text/javascript" src="../js/switcher.js"></script>
+<!-- SCROLLSPY JS -->
+<script src="../js/scrollspy.min.js"></script>
+<!-- CUSTOM JS -->
+<script src="../js/app.js"></script>
+</body>
+</html>

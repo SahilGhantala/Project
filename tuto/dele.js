@@ -9,5 +9,6 @@
 // var str="hello world";
 // console.log(str)
 
-var str= new String("javaScript tuto")
-console.log(str)
+var str= new String("javaScript tuto");
+console.log(str);
+
